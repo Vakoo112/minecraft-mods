@@ -1,5 +1,5 @@
 {
-  "variants" : {
-    "": {"model": "tutorialmod.block/redron_block"}
+  "variants": {
+    "": { "model": "tutorialmod:block/redron_block" }
   }
 }
