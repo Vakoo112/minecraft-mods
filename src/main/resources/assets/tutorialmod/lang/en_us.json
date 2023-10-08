@@ -2,6 +2,8 @@
   "item.tutorialmod.redron" : "Redron",
   "item.tutorialmod.raw_redron" : "Raw Redron",
   "item.tutorialmod.etherium" : "Etherium",
-  "block.tutorialmod.redron_block": "Block of Redron"
+  "item.tutorialmod.eight_ball" : "Eight Ball",
+  "block.tutorialmod.redron_block": "Block of Redron",
+  "block.tutorialmod.highjump_block": "High Jump Block"
 }
 

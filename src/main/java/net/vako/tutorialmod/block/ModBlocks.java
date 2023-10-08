@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vako.tutorialmod.TutorialMod;
+import net.vako.tutorialmod.block.custom.JumpyBlock;
 import net.vako.tutorialmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -23,6 +24,9 @@ public class ModBlocks {
      public static final RegistryObject<Block> REDRON_BLOCK = registerBlockMethod("redron_block",
              ()-> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC );
 
+    public static final RegistryObject<Block> HIGHJUMP_BLOCK = registerBlockMethod("highjump_block",
+            ()-> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC );
+
      private static <T extends Block>RegistryObject<T> registerBlockMethod(String name, Supplier<T> block, CreativeModeTab tab){
          RegistryObject<T> returnThing = BLOCKS.register(name, block);
          registerBlockItem(name,returnThing,tab);
@@ -32,6 +36,8 @@ public class ModBlocks {
      private static<T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab ){
          return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
      }
+
+
 
      public static void register(IEventBus event){
          BLOCKS.register(event);

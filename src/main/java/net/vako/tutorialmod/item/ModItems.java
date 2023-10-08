@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.vako.tutorialmod.TutorialMod;
+import net.vako.tutorialmod.item.custom.EightBallItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -18,6 +19,9 @@ public class ModItems {
     public static final RegistryObject<Item> RAW_ZIRCON = ITEMS.register("raw_redron",()-> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> ETHERIUM = ITEMS.register("etherium",()-> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",()-> new EightBallItem
+            (new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1)));
     public static void Register(IEventBus event){
         ITEMS.register(event);
     }
