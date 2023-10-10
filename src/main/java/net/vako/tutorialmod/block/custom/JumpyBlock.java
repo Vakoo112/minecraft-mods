@@ -24,6 +24,8 @@ public class JumpyBlock extends Block {
     public void stepOn(Level level, BlockPos blockPos, BlockState blockState, Entity entity) {
         if(entity instanceof LivingEntity livingEntity){
             livingEntity.addEffect(new MobEffectInstance(MobEffects.JUMP, 200));
+            // ვამატებ რეგენერაციის უნარს 10 წამის განმავლობაში
+            livingEntity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200));
         }
 
 
@@ -32,7 +34,7 @@ public class JumpyBlock extends Block {
 
     @Override
     public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
-
+        //კლიენტის მხარეს ვზღუდავ გაგზავნას
         if(level.isClientSide) {
 
             player.sendSystemMessage(Component.literal("Right Clicked This!"));

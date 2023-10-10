@@ -3,7 +3,10 @@
   "item.tutorialmod.raw_redron" : "Raw Redron",
   "item.tutorialmod.etherium" : "Etherium",
   "item.tutorialmod.eight_ball" : "Eight Ball",
+
+
   "block.tutorialmod.redron_block": "Block of Redron",
-  "block.tutorialmod.highjump_block": "High Jump Block"
+  "block.tutorialmod.highjump_block": "High Jump Block",
+  "block.tutorialmod.redronlamp_block": "Redron Lamp Block"
 }
 
