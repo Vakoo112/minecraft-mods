@@ -19,24 +19,24 @@ import java.util.List;
 public class ModEvents {
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
-        if (event.getType() == VillagerProfession.TOOLSMITH) {
+        if(event.getType() == VillagerProfession.TOOLSMITH) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModItems.EIGHT_BALL.get(), 1);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 2),
-                    stack, 10, 8, 0.02F));
+                    stack,10,8,0.02F));
         }
 
-        if (event.getType() == ModVillagers.JUMP_MASTER.get()) {
+        if(event.getType() == ModVillagers.JUMP_MASTER.get()) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModItems.ETHERIUM.get(), 15);
             int villagerLevel = 1;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 5),
-                    stack, 10, 8, 0.02F));
+                    stack,10,8,0.02F));
         }
     }
 }
