@@ -7,6 +7,8 @@
 
   "block.tutorialmod.redron_block": "Block of Redron",
   "block.tutorialmod.highjump_block": "High Jump Block",
-  "block.tutorialmod.redronlamp_block": "Redron Lamp Block"
+  "block.tutorialmod.redronlamp_block": "Redron Lamp Block",
+
+  "entity.minecraft.villager.tutorialmod.jumpy_master": "Jumpy Master"
 }
 

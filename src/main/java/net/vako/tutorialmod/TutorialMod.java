@@ -13,6 +13,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vako.tutorialmod.block.ModBlocks;
 import net.vako.tutorialmod.item.ModItems;
 import net.vako.tutorialmod.painting.ModPaintings;
+import net.vako.tutorialmod.villager.ModVillagers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -28,6 +29,7 @@ public class TutorialMod
         ModItems.Register(modEventBus);
         ModBlocks.register(modEventBus);
         ModPaintings.Register(modEventBus);
+        ModVillagers.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
 
 
@@ -35,6 +37,7 @@ public class TutorialMod
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(()-> {ModVillagers.registerPOIs();});
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
