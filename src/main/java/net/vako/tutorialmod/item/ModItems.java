@@ -25,7 +25,6 @@ public class ModItems {
     public static final RegistryObject<Item> ETHERIUM = ITEMS.register("etherium",()-> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
 
-
     public static final RegistryObject<Item> EIGHT_BALL = ITEMS.register("eight_ball",()-> new EightBallItem
             (new Item.Properties().tab(CreativeModeTab.TAB_MISC).stacksTo(1).rarity(Rarity.RARE)));
     public static void Register(IEventBus event){

@@ -9,6 +9,9 @@
   "block.tutorialmod.highjump_block": "High Jump Block",
   "block.tutorialmod.redronlamp_block": "Redron Lamp Block",
 
-  "entity.minecraft.villager.tutorialmod.jumpy_master": "Jumpy Master"
+  "entity.minecraft.villager.tutorialmod.jumpy_master": "Jumpy Master",
+
+  "key.category.tutorialmod.tutorial": "Tutorial Mod",
+  "key.tutorialmod.drink_water": "Drink Water"
 }
 
