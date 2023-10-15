@@ -12,6 +12,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.vako.tutorialmod.block.ModBlocks;
 import net.vako.tutorialmod.item.ModItems;
+import net.vako.tutorialmod.networking.ModMessages;
 import net.vako.tutorialmod.painting.ModPaintings;
 import net.vako.tutorialmod.villager.ModVillagers;
 import org.slf4j.Logger;
@@ -38,8 +39,8 @@ public class TutorialMod
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(()-> {ModVillagers.registerPOIs();});
+        ModMessages.register();
     }
-
     // You can use SubscribeEvent and let the Event Bus discover methods to call
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
