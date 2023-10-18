@@ -9,6 +9,7 @@ import net.minecraftforge.network.simple.SimpleChannel;
 import net.vako.tutorialmod.TutorialMod;
 import net.vako.tutorialmod.networking.packet.DrinkWaterC2SPacket;
 import net.vako.tutorialmod.networking.packet.ExampleC2SPacket;
+import net.vako.tutorialmod.networking.packet.ThirstDataSyncS2CPacket;
 
 public class ModMessages {
     private static SimpleChannel INSTANCE;
@@ -32,7 +33,8 @@ public class ModMessages {
 
         net.messageBuilder(DrinkWaterC2SPacket.class,id(), NetworkDirection.PLAY_TO_SERVER).decoder(DrinkWaterC2SPacket::new)
                 .encoder(DrinkWaterC2SPacket::toBytes).consumerMainThread(DrinkWaterC2SPacket::handle).add();
-
+        net.messageBuilder(ThirstDataSyncS2CPacket.class,id(), NetworkDirection.PLAY_TO_CLIENT).decoder(ThirstDataSyncS2CPacket::new)
+                .encoder(ThirstDataSyncS2CPacket::toBytes).consumerMainThread(ThirstDataSyncS2CPacket::handle).add();
 
     }
 
