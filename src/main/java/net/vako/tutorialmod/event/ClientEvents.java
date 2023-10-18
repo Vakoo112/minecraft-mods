@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.vako.tutorialmod.TutorialMod;
 import net.vako.tutorialmod.networking.ModMessages;
+import net.vako.tutorialmod.networking.packet.DrinkWaterC2SPacket;
 import net.vako.tutorialmod.networking.packet.ExampleC2SPacket;
 import net.vako.tutorialmod.util.KeyBinding;
 
@@ -24,7 +25,7 @@ public class ClientEvents {
         public static void onKeyInput(InputEvent.Key event){
              if(KeyBinding.DRINKING_KEY.consumeClick()){
                  Minecraft.getInstance().player.sendSystemMessage(Component.literal("Pressed a Key!"));
-                 ModMessages.sendToServer(new ExampleC2SPacket());
+                 ModMessages.sendToServer(new DrinkWaterC2SPacket());
              }
         }
     }

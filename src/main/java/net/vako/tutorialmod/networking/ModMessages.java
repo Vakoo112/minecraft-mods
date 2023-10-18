@@ -7,6 +7,7 @@ import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 import net.vako.tutorialmod.TutorialMod;
+import net.vako.tutorialmod.networking.packet.DrinkWaterC2SPacket;
 import net.vako.tutorialmod.networking.packet.ExampleC2SPacket;
 
 public class ModMessages {
@@ -28,6 +29,9 @@ public class ModMessages {
 
         net.messageBuilder(ExampleC2SPacket.class,id(), NetworkDirection.PLAY_TO_SERVER).decoder(ExampleC2SPacket::new)
                 .encoder(ExampleC2SPacket::toBytes).consumerMainThread(ExampleC2SPacket::handle).add();
+
+        net.messageBuilder(DrinkWaterC2SPacket.class,id(), NetworkDirection.PLAY_TO_SERVER).decoder(DrinkWaterC2SPacket::new)
+                .encoder(DrinkWaterC2SPacket::toBytes).consumerMainThread(DrinkWaterC2SPacket::handle).add();
 
 
     }
